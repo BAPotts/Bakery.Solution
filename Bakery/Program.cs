@@ -10,7 +10,6 @@ namespace Bakery {
       int [] breadArray = BreadSelection();
       int [] pastryArray = PastrySelection();
       
-
       Bread newBread = new Bread(breadArray);
       newBread.AddBreadOrder();
       newBread.SetPrice();
