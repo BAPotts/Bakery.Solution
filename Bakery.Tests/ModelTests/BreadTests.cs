@@ -30,6 +30,5 @@ namespace Bakery.Tests
 
       Assert.AreEqual(20, newBread.BreadPrice);
     }
-
   }
 }

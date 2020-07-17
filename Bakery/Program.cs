@@ -18,8 +18,7 @@ namespace Bakery {
       Pastry newPastry = new Pastry(pastryOrder);
       int pastryTotal = newPastry.GetPrice();
       Console.WriteLine("---------Your Order-----------");
-      Console.WriteLine("Bread Order: " + breadOrder);
-      // Console.WriteLine("Bread Price Sub-Total: $" + newBread.GetPrice());
+      OrderOutput(newBread);
       Console.WriteLine("Pastry Order: " + pastryOrder);
       Console.WriteLine("Pastry Price Sub-Total: $" + pastryTotal);
       // Console.WriteLine("Total Price: $" + (breadTotal + pastryTotal));
@@ -30,6 +29,12 @@ namespace Bakery {
       Console.WriteLine("------------Welcome to Pierre's Bakery!-------");
       Console.WriteLine("Bread:$5 each or buy 2, get 1 free!");
       Console.WriteLine("Pastries: $2 each or 3 for $5!");
+    }
+
+    public static void OrderOutput(Bread bread)
+    {
+      Console.WriteLine("Bread Order: " + bread.Order);
+      Console.WriteLine("Bread Price Sub-Total: $" + bread.BreadPrice);
     }
   }
 }
