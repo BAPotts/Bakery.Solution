@@ -22,11 +22,11 @@ namespace Bakery.Tests
     //   Assert.AreEqual(20, newBread.GetPrice());
     // }
     [TestMethod]
-    public void GetPrice_Gives3rdBreadFree_20()
+    public void SetPrice_Gives3rdBreadFree_20()
     {
       int order = 6;
       Bread newBread = new Bread(order);
-      newBread.GetPrice();
+      newBread.SetPrice();
 
       Assert.AreEqual(20, newBread.BreadPrice);
     }

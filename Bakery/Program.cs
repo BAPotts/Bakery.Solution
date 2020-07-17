@@ -14,7 +14,7 @@ namespace Bakery {
       int pastryOrder = int.Parse(Console.ReadLine());
 
       Bread newBread = new Bread(breadOrder);
-      newBread.GetPrice();
+      newBread.SetPrice();
       Pastry newPastry = new Pastry(pastryOrder);
       int pastryTotal = newPastry.GetPrice();
       Console.WriteLine("---------Your Order-----------");
