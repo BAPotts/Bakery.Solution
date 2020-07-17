@@ -1,11 +1,14 @@
+using System.Collections.Generic;
 namespace Bakery
 {
   public class Bread
   {
+    public List <int> BreadList {get; set;}
     public int Order {get; set;}
     public int BreadPrice {get; set;}
     public Bread(int order)
     {
+      BreadList = new List<int>(){}; 
       Order = order;
       BreadPrice = 0;
     }
