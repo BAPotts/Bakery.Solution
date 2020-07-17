@@ -8,14 +8,14 @@ namespace Bakery {
     {
       Greeting();
       int [] breadArray = BreadSelection();
+      int [] pastryArray = PastrySelection();
       
-      Console.WriteLine("How many pastries would you like?");
-      int pastryOrder = int.Parse(Console.ReadLine());
 
       Bread newBread = new Bread(breadArray);
       newBread.AddBreadOrder();
       newBread.SetPrice();
-      Pastry newPastry = new Pastry(pastryOrder);
+      Pastry newPastry = new Pastry(pastryArray);
+      newPastry.AddPastryOrder();
       newPastry.SetPrice();
       
       OrderOutput(newBread, newPastry);
@@ -41,6 +41,18 @@ namespace Bakery {
       return breadArray;
     }
 
+    public static int [] PastrySelection()
+    {
+      int [] pastryArray = new int[3];
+      Console.WriteLine("How many chocolate croissants would you like?");
+      pastryArray[0] = int.Parse(Console.ReadLine());
+      Console.WriteLine("How many bear claws would you like?");
+      pastryArray[1] = int.Parse(Console.ReadLine());
+      Console.WriteLine("How many blueberry streudels would you like?");
+      pastryArray[2] = int.Parse(Console.ReadLine());
+      return pastryArray;
+    }
+
     public static void OrderOutput(Bread bread, Pastry pastry)
     {
       Console.WriteLine("---------Your Order-----------");
@@ -49,7 +61,10 @@ namespace Bakery {
       Console.WriteLine("Marble Rye: " + bread.BreadArray[1]);
       Console.WriteLine("Honey Wheat: " + bread.BreadArray[2]);
       Console.WriteLine("Bread Price Sub-Total: $" + bread.BreadPrice);
-      Console.WriteLine("Pastry Order: " + pastry.Order);
+      Console.WriteLine("Pastry Order: ");
+      Console.WriteLine("Chocolate Croissant: " + pastry.PastryArray[0]);
+      Console.WriteLine("Bear Claw: " + pastry.PastryArray[1]);
+      Console.WriteLine("Blueberry Streudel: " + pastry.PastryArray[2]);
       Console.WriteLine("Pastry Price Sub-Total: $" + pastry.PastryPrice);
       Console.WriteLine("Total Price: $" + (bread.BreadPrice + pastry.PastryPrice));
     }

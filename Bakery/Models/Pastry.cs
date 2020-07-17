@@ -2,11 +2,13 @@ namespace Bakery
 {
   public class Pastry
   {
+    public int [] PastryArray {get; set;}
     public int Order {get; set;}
     public int PastryPrice {get; set;}
-    public Pastry(int order)
+    public Pastry(int[] pastryArray)
     {
-      Order = order;
+      PastryArray = pastryArray;
+      Order = 0;
       PastryPrice = 0;
     }
 
@@ -21,6 +23,14 @@ namespace Bakery
         }
       }
     PastryPrice = pastryPrice; 
+    }
+      public void AddPastryOrder()
+    {int order = 0;
+      for(int i = 0; i <PastryArray.Length; i++)
+      {
+        order += PastryArray[i];
+      }
+      Order = order;
     }
   }
 }
