@@ -6,10 +6,10 @@ namespace Bakery
     public int [] BreadArray {get; set;}
     public int Order {get; set;}
     public int BreadPrice {get; set;}
-    public Bread(int order)
+    public Bread(int[] breadArray)
     {
-      BreadArray = new int [3]; 
-      Order = order;
+      BreadArray = breadArray; 
+      Order = 0;
       BreadPrice = 0;
     }
 
@@ -24,6 +24,14 @@ namespace Bakery
         }
       }
     BreadPrice = breadPrice; 
+    }
+    public void AddBreadOrder()
+    {int order = 0;
+      for(int i = 0; i <BreadArray.Length; i++)
+      {
+        order += i;
+      }
+      Order = order;
     }
   }
 }
