@@ -29,7 +29,7 @@ namespace Bakery
     {int order = 0;
       for(int i = 0; i <BreadArray.Length; i++)
       {
-        order += i;
+        order += BreadArray[i] +1;
       }
       Order = order;
     }

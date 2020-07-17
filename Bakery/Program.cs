@@ -8,17 +8,17 @@ namespace Bakery {
     {
       Greeting();
 
-      Console.WriteLine("How many loaves of bread would you like?");
-      int breadOrder = int.Parse(Console.ReadLine());
-      Console.WriteLine("How many pastries would you like?");
-      int pastryOrder = int.Parse(Console.ReadLine());
+      // Console.WriteLine("How many loaves of bread would you like?");
+      // int breadOrder = int.Parse(Console.ReadLine());
+      // Console.WriteLine("How many pastries would you like?");
+      // int pastryOrder = int.Parse(Console.ReadLine());
 
-      Bread newBread = new Bread(breadOrder);
-      newBread.SetPrice();
-      Pastry newPastry = new Pastry(pastryOrder);
-      newPastry.SetPrice();
+      // Bread newBread = new Bread(breadOrder);
+      // newBread.SetPrice();
+      // Pastry newPastry = new Pastry(pastryOrder);
+      // newPastry.SetPrice();
       
-      OrderOutput(newBread, newPastry);
+      // OrderOutput(newBread, newPastry);
       
     }
 
