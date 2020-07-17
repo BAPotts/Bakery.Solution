@@ -13,5 +13,13 @@ namespace Bakery.Tests
       Pastry newPastry = new Pastry(order);
       Assert.AreEqual(3, newPastry.Order);
     }
+    [TestMethod]
+    public void PastryPrice_Every3rdpastry1Dollar_17()
+    {
+      int order = 10;
+      Pastry newPastry = new Pastry(order);
+      Assert.AreEqual(17, newPastry.GetPrice());
+    }
+
   }
 }
