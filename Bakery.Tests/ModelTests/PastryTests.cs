@@ -6,6 +6,12 @@ namespace Bakery.Tests
   [TestClass]
   public class PastryTests
   {
-    // Test methods go here
+    [TestMethod]
+    public void PastryConstructor_HasOrder_3()
+    {
+      int order = 3;
+      Pastry newPastry = new Pastry(order);
+      Assert.AreEqual(3, newPastry.Order);
+    }
   }
 }
