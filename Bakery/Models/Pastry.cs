@@ -11,9 +11,9 @@ namespace Bakery
 
     public int GetPrice()
     {int pastryPrice = 0;
-      for (int i=0; i<= Order; i++)
+      for (int i=1; i<= Order; i++)
       { if (i % 3 == 0)
-        { pastryPrice += 2;
+        { pastryPrice += 1;
         }
         else
         { pastryPrice += 2;
