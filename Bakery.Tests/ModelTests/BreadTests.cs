@@ -21,15 +21,16 @@ namespace Bakery.Tests
     //   Bread newBread = new Bread(order);
     //   Assert.AreEqual(20, newBread.GetPrice());
     // }
-    // [TestMethod]
-    // public void SetPrice_Gives3rdBreadFree_20()
-    // {
-    //   int order = 6;
-    //   Bread newBread = new Bread(order);
-    //   newBread.SetPrice();
+    [TestMethod]
+    public void SetPrice_Gives3rdBreadFree_20()
+    {
+      int [] breadArray = new int [3] {2, 4, 1};
+      Bread newBread = new Bread(breadArray);
+      newBread.AddBreadOrder();
+      newBread.SetPrice();
 
-    //   Assert.AreEqual(20, newBread.BreadPrice);
-    // }
+      Assert.AreEqual(25, newBread.BreadPrice);
+    }
     [TestMethod]
     public void AddBreadOrder_AddsArrayValues_7()
     {
