@@ -7,7 +7,7 @@ namespace Bakery {
     public static void Main()
     {
       Greeting();
-      
+
       Console.WriteLine("How many loaves of bread would you like?");
       int breadOrder = int.Parse(Console.ReadLine());
       Console.WriteLine("How many pastries would you like?");
@@ -17,7 +17,12 @@ namespace Bakery {
       int breadTotal = newBread.GetPrice();
       Pastry newPastry = new Pastry(pastryOrder);
       int pastryTotal = newPastry.GetPrice();
-      Console.WriteLine("Total Price: " + (breadTotal + pastryTotal));
+      Console.WriteLine("---------Your Order-----------");
+      Console.WriteLine("Bread Order: " + breadOrder);
+      Console.WriteLine("Bread Price Sub-Total: $" + breadTotal);
+      Console.WriteLine("Pastry Order: " + pastryOrder);
+      Console.WriteLine("Pastry Price Sub-Total: $" + pastryTotal);
+      Console.WriteLine("Total Price: $" + (breadTotal + pastryTotal));
     }
 
     public static void Greeting()
