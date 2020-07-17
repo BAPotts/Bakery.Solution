@@ -13,7 +13,7 @@ namespace Bakery
     public void GetPrice()
     {int breadPrice = 0;
       for (int i=1; i<= Order; i++)
-      { if (i % 2 == 0)
+      { if (i % 3 == 0)
         { 
         }
         else
