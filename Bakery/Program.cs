@@ -7,13 +7,8 @@ namespace Bakery {
     public static void Main()
     {
       Greeting();
-      int [] breadArray = new int[3];
-      Console.WriteLine("How many loaves of sourdough would you like?");
-      breadArray[0] = int.Parse(Console.ReadLine());
-      Console.WriteLine("How many loaves of marble rye would you like?");
-      breadArray[1] = int.Parse(Console.ReadLine());
-      Console.WriteLine("How many loaves of honey wheat would you like?");
-      breadArray[2] = int.Parse(Console.ReadLine());
+      int [] breadArray = BreadSelection();
+      
       Console.WriteLine("How many pastries would you like?");
       int pastryOrder = int.Parse(Console.ReadLine());
 
@@ -32,6 +27,18 @@ namespace Bakery {
       Console.WriteLine("------------Welcome to Pierre's Bakery!-------");
       Console.WriteLine("Bread:$5 each or buy 2, get 1 free!");
       Console.WriteLine("Pastries: $2 each or 3 for $5!");
+    }
+
+    public static int [] BreadSelection()
+    {
+      int [] breadArray = new int[3];
+      Console.WriteLine("How many loaves of sourdough would you like?");
+      breadArray[0] = int.Parse(Console.ReadLine());
+      Console.WriteLine("How many loaves of marble rye would you like?");
+      breadArray[1] = int.Parse(Console.ReadLine());
+      Console.WriteLine("How many loaves of honey wheat would you like?");
+      breadArray[2] = int.Parse(Console.ReadLine());
+      return breadArray;
     }
 
     public static void OrderOutput(Bread bread, Pastry pastry)
