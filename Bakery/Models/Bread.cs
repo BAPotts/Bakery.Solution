@@ -8,17 +8,17 @@ namespace Bakery
       Order = order;
     }
 
-    public int getPrice()
+    public int GetPrice()
     {int breadPrice = 0;
       for (int i=0; i<= Order; i++)
-      { if (i % 2 == 0)
+      { if (i % 3 == 0)
         { 
         }
         else
         { breadPrice += 5;
         }
       }
-     return breadPrice; 
+    return breadPrice; 
     }
   }
 }
