@@ -14,15 +14,15 @@ namespace Bakery {
       int pastryOrder = int.Parse(Console.ReadLine());
 
       Bread newBread = new Bread(breadOrder);
-      int breadTotal = newBread.GetPrice();
+      newBread.GetPrice();
       Pastry newPastry = new Pastry(pastryOrder);
       int pastryTotal = newPastry.GetPrice();
       Console.WriteLine("---------Your Order-----------");
       Console.WriteLine("Bread Order: " + breadOrder);
-      Console.WriteLine("Bread Price Sub-Total: $" + breadTotal);
+      // Console.WriteLine("Bread Price Sub-Total: $" + newBread.GetPrice());
       Console.WriteLine("Pastry Order: " + pastryOrder);
       Console.WriteLine("Pastry Price Sub-Total: $" + pastryTotal);
-      Console.WriteLine("Total Price: $" + (breadTotal + pastryTotal));
+      // Console.WriteLine("Total Price: $" + (breadTotal + pastryTotal));
     }
 
     public static void Greeting()
