@@ -17,11 +17,9 @@ namespace Bakery {
       newBread.SetPrice();
       Pastry newPastry = new Pastry(pastryOrder);
       newPastry.SetPrice();
-      Console.WriteLine("---------Your Order-----------");
-      OrderOutput(newBread);
-      Console.WriteLine("Pastry Order: " + pastryOrder);
-      //Console.WriteLine("Pastry Price Sub-Total: $" + pastryTotal);
-      // Console.WriteLine("Total Price: $" + (breadTotal + pastryTotal));
+      
+      OrderOutput(newBread, newPastry);
+      
     }
 
     public static void Greeting()
@@ -31,10 +29,14 @@ namespace Bakery {
       Console.WriteLine("Pastries: $2 each or 3 for $5!");
     }
 
-    public static void OrderOutput(Bread bread)
+    public static void OrderOutput(Bread bread, Pastry pastry)
     {
+      Console.WriteLine("---------Your Order-----------");
       Console.WriteLine("Bread Order: " + bread.Order);
       Console.WriteLine("Bread Price Sub-Total: $" + bread.BreadPrice);
+      Console.WriteLine("Pastry Order: " + pastry.Order);
+      Console.WriteLine("Pastry Price Sub-Total: $" + pastry.PastryPrice);
+      Console.WriteLine("Total Price: $" + (bread.BreadPrice + pastry.PastryPrice));
     }
   }
 }
