@@ -16,11 +16,11 @@ namespace Bakery {
       Bread newBread = new Bread(breadOrder);
       newBread.SetPrice();
       Pastry newPastry = new Pastry(pastryOrder);
-      int pastryTotal = newPastry.GetPrice();
+      newPastry.SetPrice();
       Console.WriteLine("---------Your Order-----------");
       OrderOutput(newBread);
       Console.WriteLine("Pastry Order: " + pastryOrder);
-      Console.WriteLine("Pastry Price Sub-Total: $" + pastryTotal);
+      //Console.WriteLine("Pastry Price Sub-Total: $" + pastryTotal);
       // Console.WriteLine("Total Price: $" + (breadTotal + pastryTotal));
     }
 
