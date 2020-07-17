@@ -14,5 +14,13 @@ namespace Bakery.Tests
       Assert.AreEqual(3, newBread.Order);
     }
 
+     [TestMethod]
+     public void BreadPrice_Gives3rdBreadFree_20()
+     {
+       int order = 6;
+       Bread newBread = new Bread(order);
+       Assert.AreEqual(20, newBread.getPrice());
+     }
+
   }
 }

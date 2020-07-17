@@ -7,5 +7,18 @@ namespace Bakery
     {
       Order = order;
     }
+
+    public int getPrice()
+    {int breadPrice = 0;
+      for (int i=0; i<= Order; i++)
+      { if (i % 2 == 0)
+        { 
+        }
+        else
+        { breadPrice += 5;
+        }
+      }
+     return breadPrice; 
+    }
   }
 }
